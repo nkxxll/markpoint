@@ -1,0 +1,4 @@
+Header: header
+<Level: 0; Type: <TextType.Bullet: 2>; Text: bullet>
+<Level: 0; Type: <TextType.Bullet: 2>; Text: bullet>
+<Level: 0; Type: <TextType.Bullet: 2>; Text: bullet>

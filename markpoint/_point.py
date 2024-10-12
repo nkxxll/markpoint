@@ -6,7 +6,7 @@ __all__ = ["PointGenerator"]
 
 
 class PointGenerator:
-    def __init__(self, slideinfo: list[SlideInfo] = []) -> None:
+    def __init__(self, slideinfo: list[SlideInfo]) -> None:
         self._slideinfolist = slideinfo
 
     @property
@@ -22,30 +22,19 @@ class PointGenerator:
         # Create a presentation object
         prs = Presentation()
 
-        # Add a blank slide layout
-        slide_layout = prs.slide_layouts[1]  # Title and Content layout
-        slide = prs.slides.add_slide(slide_layout)
+        for s in self._slideinfolist:
+            # Add a blank slide layout
+            slide_layout = prs.slide_layouts[1]  # Title and Content layout
+            slide = prs.slides.add_slide(slide_layout)
 
-        # Set the title
-        title = slide.shapes.title
-        title.text = "My Slide Title"
+            # Set the title
+            title = slide.shapes.title
+            title.text = s.header
 
-        # Add bullet points to the content placeholder
-        print(slide.placeholders[1].shape_type)
-        content = slide.placeholders[1]
-        content.text = "This is some full text\nwith a new line and some other text that is really really long and so on and this text goes on and on it is so long it is very long long aber ich will nicht dass das Ganz zu lang wird aber schon ein bisschen laenger aber die Flughanfen Genoicde"
-
-        # # Add bullet points as paragraphs
-        # bullet_points = [
-        #     "First bullet point",
-        #     "Second bullet point",
-        #     "Third bullet point",
-        # ]
-        # for point in bullet_points:
-        #     p = content.text_frame.add_paragraph()
-        #     p.text = point
-        #     p.level = 1  # Indentation level (0 = main bullet, 1 = sub-bullet)
-
-        # TODO: make all the checks for the outfile or create it or so
-        # Save the presentation
+            # Add bullet points to the content placeholder
+            content = slide.placeholders[1]
+            for t in s.texts:
+                p = content.text_frame.add_paragraph()
+                p.text = t.text
+                p.level = t.level
         prs.save(outfile)

@@ -1,8 +1,8 @@
 import logging
 
-from ._mark import MarkParser
-from ._point import PointGenerator
-from ._slide import SlideInfo
+from markpoint._mark import MarkParser
+from markpoint._point import PointGenerator
+from markpoint._slide import SlideInfo
 
 # Apply logging configuration
 logging.basicConfig(level=logging.DEBUG)

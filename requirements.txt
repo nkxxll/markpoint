@@ -1,0 +1,11 @@
+iniconfig==2.0.0
+lxml @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_e656pjhd5l/croot/lxml_1722882197113/work
+packaging==24.1
+pillow @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_617xe_y58w/croot/pillow_1721059447446/work
+pluggy==1.5.0
+pytest==8.3.3
+pytest-snapshot==0.9.0
+python-pptx @ file:///private/var/folders/k1/30mswbxs7r1g6zwn8y4fyt500000gp/T/abs_f1sox7jaxl/croot/python-pptx_1720081351037/work
+setuptools==75.1.0
+wheel==0.44.0
+XlsxWriter @ file:///Users/builder/cbouss/perseverance-python-buildout/croot/xlsxwriter_1699250873123/work

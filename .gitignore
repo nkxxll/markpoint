@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 
 *test.pptx*
+secure_sharing_presentation_notes.md
+*.pptx
